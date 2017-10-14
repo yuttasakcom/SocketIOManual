@@ -1,0 +1,27 @@
+{
+  "name": "SocketIOManual",
+  "version": "1.0.0",
+  "description": "คู่มือการใช้งาน Socket.io ฉบับ YoProgrammer",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm run start --prefix client",
+    "server": "nodemon server/index.js",
+    "start": "concurrently \"npm run client\"  \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuttasakcom/SocketIOManual.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuttasakcom/SocketIOManual/issues"
+  },
+  "homepage": "https://github.com/yuttasakcom/SocketIOManual#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "express": "^4.16.2",
+    "nodemon": "^1.12.1"
+  }
+}
