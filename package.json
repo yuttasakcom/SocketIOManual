@@ -1,27 +1,24 @@
 {
-  "name": "SocketIOManual",
+  "name": "FullStackJavascript",
   "version": "1.0.0",
-  "description": "คู่มือการใช้งาน Socket.io ฉบับ YoProgrammer",
-  "main": "index.js",
+  "description": "คู่มือ Full Stack Javascript ฉบับ YoProgrammer",
+  "main": "",
   "scripts": {
-    "client": "npm run start --prefix client",
-    "server": "nodemon server/index.js",
-    "start": "concurrently \"npm run client\"  \"npm run server\""
+    "vuejs": "npm run start --prefix vuejs",
+    "react": "npm run start --prefix react",
+    "nodejs": "npm run start --prefix nodejs",
+    "start": "concurrently \"npm run vuejs\"  \"npm run react\" \"npm run nodejs\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yuttasakcom/SocketIOManual.git"
+    "url": "git+https://github.com/yuttasakcom/FullStackJavascript.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yuttasakcom/SocketIOManual/issues"
-  },
-  "homepage": "https://github.com/yuttasakcom/SocketIOManual#readme",
+  "keywords": [
+    "Full Stack Javascript"
+  ],
+  "author": "Yuttasak Pannawat",
+  "license": "MIT",
   "devDependencies": {
-    "concurrently": "^3.5.0",
-    "express": "^4.16.2",
-    "nodemon": "^1.12.1"
+    "concurrently": "^3.5.0"
   }
 }
