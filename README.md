@@ -4,6 +4,23 @@
 ## Table of Contents
 - [Create Server](#create-server)
 - [Create Client](#create-client)
+- Server Event
+  - io.on('connection')(socket => {})
+    - socket.id
+    - socket.emit() <!-- from Admin text Welcome to the chat app <ส่งถึงทุกคน> -->
+    - socket.broadcast.emit() <!-- from Admin text New user joined <ส่งถึงทุกคน ยกเว้นตัวเอง> -->
+    - socket.on()
+      - io.emit()
+      - socket.join()
+        - socket.emit()
+        - io.to().emit()
+        - socket.broadcast.to().emit()
+      - socket.leave()
+- Client Event
+  - socket.on('connect')
+  - socket.on('disconnect)
+  - socket.on()
+  - socket.emit()
 
 ## Create Server
 ```javascript
@@ -19,6 +36,10 @@ const io = socketIO(server)
 
 io.on('connection', socket => {
   console.log('New user connect')
+
+  socket.on('disconnect', () => {
+    console.log('User was disconnected')
+  })
 })
 
 app.use(express.static(path.join(__dirname, '..', 'public')))
@@ -45,6 +66,10 @@ console.log(`Server is up on ${PORT}`)
     const socket = io()
     socket.on('connect', () => {
       console.log('Connect to server')
+    })
+
+    socket.on('disconnect', () => {
+      console.log('Disconnect from server')
     })
   </script>
 </body>

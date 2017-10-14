@@ -10,6 +10,25 @@ const io = socketIO(server)
 
 io.on('connection', socket => {
   console.log('New user connect')
+
+  socket.emit('newEmail', {
+    from: 'yo',
+    text: 'Hello',
+    createAt: 123,
+  })
+
+  socket.on('createMessage', msg => {
+    console.log('createMessage', msg)
+    io.emit('newMessage', {
+      from: msg.from,
+      text: msg.text,
+      createdAt: new Date().getTime(),
+    })
+  })
+
+  socket.on('disconnect', () => {
+    console.log('User was disconnected')
+  })
 })
 
 app.use(express.static(path.join(__dirname, '..', 'public')))
