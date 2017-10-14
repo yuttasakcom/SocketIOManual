@@ -1,17 +1,16 @@
 {
-  "name": "FullStackJavascript",
+  "name": "SocketIOManual",
   "version": "1.0.0",
-  "description": "คู่มือ Full Stack Javascript ฉบับ YoProgrammer",
+  "description": "คู่มือการใช้งาน Socket.io ฉบับ YoProgrammer",
   "main": "",
   "scripts": {
-    "vuejs": "npm run start --prefix vuejs",
-    "react": "npm run start --prefix react",
-    "nodejs": "npm run start --prefix nodejs",
-    "start": "concurrently \"npm run vuejs\"  \"npm run react\" \"npm run nodejs\""
+    "client": "npm run start --prefix client",
+    "server": "npm run start --prefix server",
+    "start": "concurrently \"npm run client\" \"npm run client\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yuttasakcom/FullStackJavascript.git"
+    "url": "git+https://github.com/yuttasakcom/SocketIOManual.git"
   },
   "keywords": [
     "Full Stack Javascript"
