@@ -4,20 +4,22 @@
   "description": "คู่มือการใช้งาน Socket.io ฉบับ YoProgrammer",
   "main": "",
   "scripts": {
-    "client": "npm run start --prefix client",
-    "server": "npm run start --prefix server",
-    "start": "concurrently \"npm run client\" \"npm run client\""
+    "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuttasakcom/SocketIOManual.git"
   },
   "keywords": [
-    "Full Stack Javascript"
+    "Socket.io"
   ],
   "author": "Yuttasak Pannawat",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.3"
   }
 }
