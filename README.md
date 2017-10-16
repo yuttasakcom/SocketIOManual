@@ -9,7 +9,7 @@
     - socket.id
     - socket.emit()
     - socket.broadcast.emit()
-    - socket.on() <!-- send callback ext. socket.on('event', (msg, cb) => {cb()})-->
+    - socket.on() # send callback ext. socket.on('event', (msg, cb) => {cb()})
       - io.emit()
       - socket.join()
         - socket.emit()
@@ -20,7 +20,7 @@
   - socket.on('connect')
   - socket.on('disconnect)
   - socket.on()
-  - socket.emit() <!-- recive callback ext. socket.emit({}, function(){})-->
+  - socket.emit() # recive callback ext. socket.emit({}, function(){})
 
 ## Create Server
 ```javascript
