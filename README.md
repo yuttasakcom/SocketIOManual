@@ -7,9 +7,9 @@
 - Server Event
   - io.on('connection')(socket => {})
     - socket.id
-    - socket.emit() <!-- from Admin text Welcome to the chat app <ส่งถึงทุกคน> -->
-    - socket.broadcast.emit() <!-- from Admin text New user joined <ส่งถึงทุกคน ยกเว้นตัวเอง> -->
-    - socket.on()
+    - socket.emit()
+    - socket.broadcast.emit()
+    - socket.on() <!-- send callback ext. socket.on('event', (msg, cb) => {cb()})-->
       - io.emit()
       - socket.join()
         - socket.emit()
@@ -20,7 +20,7 @@
   - socket.on('connect')
   - socket.on('disconnect)
   - socket.on()
-  - socket.emit()
+  - socket.emit() <!-- recive callback ext. socket.emit({}, function(){})-->
 
 ## Create Server
 ```javascript
